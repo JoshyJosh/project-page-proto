@@ -1,0 +1,22 @@
+// Place all the styles related to the MainPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 0;
+	width: 100%;
+}
+
+div {
+	display: inline-block;
+	background-color: #444;
+	margin: 0;
+	max-width: 50%;
+	float: left;
+	width: 100%;
+	
+	p {
+		color: #0f0;
+		height: 1em;
+	}
+}
