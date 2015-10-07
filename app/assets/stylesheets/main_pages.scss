@@ -5,6 +5,7 @@
 body {
 	margin: 0;
 	width: 100%;
+	background-color: #fff;
 }
 
 div {
@@ -18,5 +19,32 @@ div {
 	p {
 		color: #0f0;
 		height: 1em;
+	}
+}
+
+/* Project list page */
+
+.flex-container {
+	padding: 0;
+	margin: 0.1em;
+	list-style: none;
+	
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
+	flex-wrap: column wrap;
+	justify-content: flex-start;
+	
+	.flex-item {
+		background-color: #39706C;
+		padding: 0.2em;
+		width: 10em;
+		margin-top: 1em;
+		
+		color: white;
+		text-align: center;
 	}
 }
