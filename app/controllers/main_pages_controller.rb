@@ -10,5 +10,6 @@ class MainPagesController < ApplicationController
   end
 
   def proj_list
+		@projects = Project.all
   end
 end

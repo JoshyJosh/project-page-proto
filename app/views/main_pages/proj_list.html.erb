@@ -2,9 +2,13 @@
 <p>Find me in app/views/main_pages/proj_list.html.erb</p>
 <%= link_to "Home over here", home_path %>
 <%= link_to "Here's a path to the intro page", root_path %>
-<article class="flex-container">
-	<div class="flex-item">1</div>
-	<div class="flex-item">2</div>
-	<div class="flex-item">3</div>
-	<div class="flex-item">4</div>
-</article>
+
+<section class="flex-container">
+	<% @projects.each do |p| %>
+		<div class="flex-item">
+			<h1><%= p.title %></h1>
+			<p><%= p.description %></p>
+		</div>
+	<% end %>
+</section>
+
