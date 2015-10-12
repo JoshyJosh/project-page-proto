@@ -1,6 +1,6 @@
 class MainPagesController < ApplicationController
 	
-	@@some_stuff = ["ruby", "javascript", "css", "php"]
+	@@proj_categories = ["ruby", "javascript", "css", "php"]
 	
   def home
 		@some_stuff = @@some_stuff
@@ -11,5 +11,6 @@ class MainPagesController < ApplicationController
 
   def proj_list
 		@projects = Project.all
+		@proj_categories = @@proj_categories
   end
 end

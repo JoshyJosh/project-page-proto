@@ -3,12 +3,23 @@
 <%= link_to "Home over here", home_path %>
 <%= link_to "Here's a path to the intro page", root_path %>
 
+<nav class="proj-nav">
+	<ul class="proj-categories">
+		<% @proj_categories.each do |c| %>
+			<li><%= c %></p>
+		<% end %>
+	</ul>
+	
+	<button>Date<span class="caret"></span></button>
+	<button>Title<span class="caret up_caret"></span></button>
+</nav>
+
 <section class="flex-container">
 	<% @projects.each do |p| %>
 		<div class="flex-item">
 			<h1><%= p.title %></h1>
 			<p><%= p.description %></p>
+			<p class="p_date"><%= p.publish_date %></p>
 		</div>
 	<% end %>
 </section>
-

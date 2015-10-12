@@ -23,9 +23,52 @@ div {
 
 /* Project list page */
 
+/* Project list navigation */
+.proj-nav {
+
+	.proj-categories{
+		
+		li{
+			display: inline-block;
+			padding: 0.5em;
+			font-variant: small-caps;
+			cursor: pointer;
+		}
+	}
+	
+	button {
+		border: none;
+		background-color: #3dd;
+		padding: 0.5em;
+		cursor: pointer;
+		
+		/* had to add font-variant again,
+		* it wouldn't work on proj-nav */
+		font-variant: small-caps;
+		
+		.caret {
+			width: 0;
+			height: 0;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			border-bottom: 5px solid black;
+			display: inline-block;
+			margin-bottom: 5%;
+			margin-left: 0.5em;
+			}
+			
+			.up_caret {
+				border-bottom: 0;
+				border-top: 5px solid black;
+			}
+		
+	}
+}
+
+
+/* Project list grid */
 .flex-container {
 	padding: 0;
-	margin: 0.1em;
 	list-style: none;
 	
 	display: -webkit-box;
@@ -46,5 +89,10 @@ div {
 		
 		color: white;
 		text-align: center;
+		
+		.p_date {
+			color: #000;
+		}
+		
 	}
 }
