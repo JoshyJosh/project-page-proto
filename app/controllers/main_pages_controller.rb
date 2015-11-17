@@ -12,6 +12,6 @@ class MainPagesController < ApplicationController
 
   def proj_list
 		@projects = @@projects
-		@proj_categories = @@proj_categories
+		@proj_categories = @@proj_categories.select(:cat_title).distinct
   end
 end
