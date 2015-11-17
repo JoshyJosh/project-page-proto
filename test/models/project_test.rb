@@ -6,8 +6,7 @@ class ProjectTest < ActiveSupport::TestCase
 	def setup
 		@project = Project.new(title: "Test Project", 
 													 description: "This is a project for testing.",
-													 publish_date: Date.new(2015, 1, 20),
-													 categories: ["Javascript", "ruby", "css"])
+													 publish_date: Date.new(2015, 1, 20))
 	end
 	
 	# check that setup project is valid
@@ -37,11 +36,5 @@ class ProjectTest < ActiveSupport::TestCase
 		@no_date_project = @project
 		@no_date_project.publish_date = ""
 		assert_not @no_date_project.valid?
-	end
-	
-	test "project without a category should be invalid" do
-		@no_category_project = @project
-		@no_category_project.categories = []
-		assert_not @no_category_project.valid?
 	end
 end

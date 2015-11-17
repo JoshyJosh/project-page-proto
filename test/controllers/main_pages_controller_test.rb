@@ -12,8 +12,6 @@ class MainPagesControllerTest < ActionController::TestCase
   end
 
   test "should get proj_list" do
-    get :proj_list
-    assert_response :success
   end
 
 end
