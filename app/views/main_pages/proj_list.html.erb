@@ -18,7 +18,10 @@
 	<% @projects.each do |p| %>
 		<div class="flex-item">
 			<h1><%= p.title %></h1>
-			<p><%= p.description %></p>
+			<%= simple_format(p.description) %>
+			<% @projects.find(p.id).categories.each do |c| %>
+				<li><%= c.cat_title %></li>
+			<% end %>
 			<p class="p_date"><%= p.publish_date %></p>
 		</div>
 	<% end %>

@@ -13,5 +13,6 @@ class MainPagesController < ApplicationController
   def proj_list
 		@projects = @@projects
 		@proj_categories = @@proj_categories.select(:cat_title).distinct
+		@test_string = "<p>This is a test it should be a paragraph</p>"
   end
 end
