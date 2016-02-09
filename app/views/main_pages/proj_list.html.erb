@@ -10,19 +10,30 @@
 		<% end %>
 	</ul>
 	
-	<button>Date<span class="caret"></span></button>
-	<button>Title<span class="caret up_caret"></span></button>
+	<!--<button>Date <span><%= @test_up_carret %></span></button>
+	<button>Title <span><%= @test_down_carret %></span></button> -->
+	<ul>
+		<li><%= sortable "publish_date", "Publish Date" %></li>
+		<li><%= sortable "title", "Title" %></li>
+	</ul>
 </nav>
-
+<!-- Gonna try the railscasts table version http://railscasts.com/episodes/228-sortable-table-columns -->
 <section class="flex-container">
 	<% @projects.each do |p| %>
 		<div class="flex-item">
 			<h1><%= p.title %></h1>
 			<%= simple_format(p.description) %>
-			<% @projects.find(p.id).categories.each do |c| %>
+			<% p.categories.each do |c| %>
 				<li><%= c.cat_title %></li>
 			<% end %>
 			<p class="p_date"><%= p.publish_date %></p>
 		</div>
 	<% end %>
 </section>
+<table>
+	<tr>
+		<th><%= "title" %></th>
+		<th><%= "category" %></th>
+		<th><%= "publish date" %></th>
+	</tr>
+</table>
