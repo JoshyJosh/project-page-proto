@@ -1,4 +1,8 @@
 module MainPagesHelper
+	
+	# For the category tag filter
+	#@@category_array = ""
+	
 	def sortable(column, title = nil)
 		direction = (column == params[:sort] && params[:direction] == "asc") ? "desc" : "asc"
 		
@@ -8,5 +12,18 @@ module MainPagesHelper
 		end
 		
 		link_to title, :sort => column, :direction => direction
+	end
+	
+	def categorizable(category)
+	
+		#if @@category_array.include?(category) 
+		#	@@category_array.delete(category)
+		#else 
+		#	@@category_array << category
+		#end
+		
+		category_select = params[:cat_sort] == category ? "" : category
+
+		link_to category, :cat_sort => category_select, :sort => params[:sort], :direction => params[:direction]
 	end
 end
