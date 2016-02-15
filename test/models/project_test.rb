@@ -4,9 +4,10 @@ class ProjectTest < ActiveSupport::TestCase
 
 	# setup called before each test
 	def setup
-		@project = Project.new(title: "Test Project", 
+		@project = Project.create(title: "Test Project", 
 													 description: "This is a project for testing.",
 													 publish_date: Date.new(2015, 1, 20))
+	  @categories = @project.categories.build(cat_title: "ruby")
 	end
 	
 	# check that setup project is valid

@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   title: First Test Proj
   description: Heres the first test description
   publish_date: 2015-10-01
 
 two:
+  id: 2
   title: MyString
   description: MyString
   publish_date: 2015-10-02

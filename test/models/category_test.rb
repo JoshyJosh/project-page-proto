@@ -4,7 +4,7 @@ class CategoryTest < ActiveSupport::TestCase
 
 	def setup
 		@project = projects(:one)
-		@category = @project.categories.build(name: "ruby")
+		@category = @project.categories.build(cat_title: "ruby")
 	end
 	
 	test "should be valid" do
