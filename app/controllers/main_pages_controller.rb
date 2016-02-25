@@ -3,10 +3,6 @@ class MainPagesController < ApplicationController
 	
 	@@proj_categories = Category.all
 	@@projects = Project.all
-
-  def home
-		@some_stuff = sort_column
-  end
   
   def about
   end

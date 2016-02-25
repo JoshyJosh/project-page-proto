@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'home' 			=> 'main_pages#home'
-
-  get 'about' 		=> 'main_pages#about'
+	
+	get 'about' 		=> 'main_pages#about'
 
   get 'proj_list' => 'main_pages#proj_list'
 
